@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubicación</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ubicación del Restaurante</h2>
+  <div id="map"></div>
+  <script src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1355.2412720285395!2d38.939822299999996!3d47.20713980000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3fd3b541c4c11%3A0x5e38802a343802bb!2zRG9ybWl0b3J5IOKEliA2!5e0!3m2!1sen!2sus!4v1731346165161!5m2!1sen!2sus" async defer></script>
+  <script>
+    function initMap() {
+      const ubicacion = { lat: -2.171, lng: -79.922 }; // Cambiar con las coordenadas reales
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: ubicacion,
+      });
+      new google.maps.Marker({
+        position: ubicacion,
+        map: map,
+      });
+    }
+  </script>
+</body>
+</html>
